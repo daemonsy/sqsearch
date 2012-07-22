@@ -7,11 +7,11 @@ require "sqsearch/version"
 Gem::Specification.new do |s|
   s.name        = "sqsearch"
   s.version     = Sqsearch::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Sqsearch."
-  s.description = "TODO: Description of Sqsearch."
+  s.authors     = ["Damon Aw"]
+  s.email       = ["daemonsy@gmail.com"]
+  s.homepage    = ""
+  s.summary     = "SQL Like search example"
+  s.description = ""
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
