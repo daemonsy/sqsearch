@@ -1,17 +1,17 @@
 module Sqsearch
   class Search
-    attr_accessor :results
+    attr_accessor :results, :query_string
     
     def initialize(fields, options={})
       # Initializer with defaults
       @fields = fields 
-      @results = Array.new
        @options = {
           :offset => 0,
           :page => 1,
           :limit => 30,
-          :min_chars => 2
+          :order => "DESC"
         }.reverse_merge! options
+        @query_string = Array.new
     end
     
   end
