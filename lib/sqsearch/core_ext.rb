@@ -9,9 +9,9 @@ module Sqsearch
     def search(query,options={})
       search_obj = Search.new(@fields)
       @fields.each do |field|
-        search_obj.query_string << "#{field} like '%#{query}%'"
+        search_obj.query_string << "#{field} like :query"
       end
-      search_obj.results = where(search_obj.query_string.join(" OR "))
+      search_obj.results = where(search_obj.query_string.join(" OR "), {:query=>"%#{query}%"})
       search_obj
     end
   end
